@@ -1,0 +1,34 @@
+﻿<Page x:Class="ReportApp.View.Pages.PatternDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ReportApp.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PatternDataPage">
+
+    <Grid Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="321*"/>
+            <ColumnDefinition Width="479*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <UniformGrid>
+                <TextBlock  HorizontalAlignment="Left" Width="122" Margin="134,0,0,0"  >Введите ФИО</TextBlock>
+                <TextBox x:Name="FioTextBlock" HorizontalAlignment="Left" Width="122" Margin="-144,0,0,0" Height="23"/>
+            </UniformGrid>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <UniformGrid>
+                <TextBlock HorizontalAlignment="Right" Width="127" Margin="0,0,-194,0"  >Введите дату начала</TextBlock>
+                <DatePicker x:Name="StartDatePicker" Margin="194,0,0,0"/>
+            </UniformGrid>
+            <Button x:Name="EnterWord" Margin="151,38,151,85" Grid.ColumnSpan="2" Click="EnterWord_Click" Content="Вывод в Word"/>
+        </StackPanel>
+    </Grid>
+</Page>
